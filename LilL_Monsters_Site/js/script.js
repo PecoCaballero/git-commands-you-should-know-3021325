@@ -7,7 +7,7 @@ $(function () {
   let navHeight = nav.scrollHeight;
 
   monsterScroll.forEach(
-    (item) => (item.style.animationDelay = `${Math.random() * 1 + 0.4}s`)
+    (item) => (item.style.animationDelay = `${Math.random() * 1 + 0.4}s`),
   );
 
   function inViewPort(el) {
@@ -40,7 +40,7 @@ $(function () {
     monsterScroll.forEach((item) =>
       inViewPort(item)
         ? item.classList.add("appear")
-        : item.classList.remove("appear")
+        : item.classList.remove("appear"),
     );
 
     window.requestAnimationFrame(moveHeader);
@@ -105,7 +105,7 @@ $(function () {
   new ScrollMagic.Scene({
     triggerElement: "#types",
     triggerHook: 0,
-    duration: 300,
+    duration: 280,
   })
     .setPin("#types")
     .setTween(typesTween)
